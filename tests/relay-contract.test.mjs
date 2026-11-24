@@ -15,8 +15,13 @@ test('accepts a compact packet with an explicit next action', () => {
     projectRoot: '/tmp/project',
     reviewer: 'claude-code',
     readOnly: true,
+    commit: 'abc1234',
+    phase: 'visual-verified',
     entrypoint: 'npm run dev',
     evidence: ['README.md', 'screenshots/390.png'],
+    viewports: [390, 1440],
+    rawResponsePath: '.agent-relay/raw/claude-code-01.md',
+    maxWords: 600,
     ask: 'Review the current UI and return P0/P1/P2 findings.',
     nextAction: 'main-agent-synthesizes'
   }))

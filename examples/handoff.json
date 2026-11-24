@@ -2,8 +2,13 @@
   "projectRoot": "/absolute/path/to/project",
   "reviewer": "claude-code",
   "readOnly": true,
+  "commit": "abc1234",
+  "phase": "visual-verified",
   "entrypoint": "npm run dev",
   "evidence": ["README.md", "src/", "screenshots/390.png", "screenshots/1440.png"],
+  "viewports": [390, 1440],
+  "rawResponsePath": ".agent-relay/raw/claude-code-01.md",
+  "maxWords": 600,
   "ask": "Review the current UI, responsive behavior, real data states and anti-AI-slop copy.",
   "nextAction": "main-agent-synthesizes"
 }

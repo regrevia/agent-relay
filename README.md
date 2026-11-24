@@ -11,7 +11,7 @@ node scripts/validate-handoff.mjs handoff.json
 node scripts/create-prompt.mjs handoff.json review-prompt.txt
 ```
 
-`handoff.json` 只保存项目根目录、入口、证据路径、审阅问题和接下来由主 agent 执行的动作。外部 agent 只读检查，原始结果应保存到 `.agent-relay/raw/`。
+`handoff.json` 还要固定 commit、阶段、视口、字数预算和原始结果路径。外部 agent 只读检查，原始结果应按 `.agent-relay/raw/<reviewer>-<round>.md` 保存。
 
 支持的适配方式包括 Claude Code CLI、WorkBuddy、网页端 ChatGPT、Gemini 和 DSH。网页端使用 Computer Use，命令行 agent 使用只读命令。协议本身不绑定具体模型，也不要求所有项目采用同一视觉风格。
 
@@ -23,6 +23,7 @@ node scripts/create-prompt.mjs handoff.json review-prompt.txt
 - 先保存原始结果，再合并意见
 - P0/P1/P2 必须带可定位证据
 - 主 agent 负责修复、提交和发布
+- 失败时只重试当前 reviewer，不能跳过原始结果保存
 
 详细规范见 [SKILL.md](SKILL.md)。
 
