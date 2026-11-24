@@ -20,6 +20,8 @@ Agent Relay is a small handoff protocol for sequential, evidence-backed review. 
 
 Use `scripts/create-prompt.mjs handoff.json review-prompt.txt`. Send the generated prompt, not source files. Reference evidence by path. Ask for compact findings and one next action. Keep screenshots outside the prompt and request the reviewer to open only the named files.
 
+Use `scripts/next-reviewer.mjs relay-state.json` to advance a serial reviewer queue. The state file is the source of truth for the next reviewer and round. Never advance it before the previous raw response is saved.
+
 ## Adapters
 
 - Claude Code CLI uses `claude -p --no-session-persistence --permission-mode dontAsk --disallowed-tools Edit,Write,Bash "$(cat review-prompt.txt)"`; save stdout to the packet's raw-response path.

@@ -9,6 +9,7 @@
 ```bash
 node scripts/validate-handoff.mjs handoff.json
 node scripts/create-prompt.mjs handoff.json review-prompt.txt
+node scripts/next-reviewer.mjs relay-state.json
 ```
 
 `handoff.json` 还要固定 commit、阶段、视口、字数预算和原始结果路径。外部 agent 只读检查，原始结果应按 `.agent-relay/raw/<reviewer>-<round>.md` 保存。

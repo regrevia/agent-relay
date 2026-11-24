@@ -1,0 +1,12 @@
+{
+  "projectRoot": "/absolute/path/to/project",
+  "commit": "abc1234",
+  "index": 1,
+  "reviewers": [
+    "claude-code",
+    "workbuddy",
+    "chatgpt-web",
+    "gemini-web",
+    "dsh"
+  ]
+}

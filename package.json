@@ -6,7 +6,8 @@
   "type": "module",
   "bin": {
     "agent-relay-validate": "scripts/validate-handoff.mjs",
-    "agent-relay-prompt": "scripts/create-prompt.mjs"
+    "agent-relay-prompt": "scripts/create-prompt.mjs",
+    "agent-relay-next": "scripts/next-reviewer.mjs"
   },
   "scripts": {
     "test": "node --test tests/*.test.mjs",
