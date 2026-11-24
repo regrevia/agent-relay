@@ -1,0 +1,9 @@
+{
+  "projectRoot": "/absolute/path/to/project",
+  "reviewer": "claude-code",
+  "readOnly": true,
+  "entrypoint": "npm run dev",
+  "evidence": ["README.md", "src/", "screenshots/390.png", "screenshots/1440.png"],
+  "ask": "Review the current UI, responsive behavior, real data states and anti-AI-slop copy.",
+  "nextAction": "main-agent-synthesizes"
+}
