@@ -1,7 +1,7 @@
 {
   "projectRoot": "/absolute/path/to/project",
   "commit": "abc1234",
-  "index": 1,
+  "index": 0,
   "reviewers": [
     "claude-code",
     "workbuddy",
